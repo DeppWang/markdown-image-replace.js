@@ -119,7 +119,7 @@ async function getNewUrl(imageUrl) {
   let parsed = url.parse(imageUrl);
   let imageName = path.basename(parsed.pathname);
   const options = {
-    url: 'https://cors-anywhere.herokuapp.com/' + imageUrl,
+    url: imageUrl,
     encoding: null
   };
   let imageBuffer = await getImageBuffer(options);
